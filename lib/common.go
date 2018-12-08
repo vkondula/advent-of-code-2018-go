@@ -65,3 +65,7 @@ func (aggregate *Aggregate) Max(value int, key int) {
 		aggregate.Key = key
 	}
 }
+func (aggregate *Aggregate) Sum(value int) {
+	aggregate.Count++
+	aggregate.Result += value
+}
